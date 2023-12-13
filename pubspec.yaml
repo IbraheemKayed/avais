@@ -61,6 +61,7 @@ dependencies:
   vertical_picker: ^0.0.1
   horizontal_picker: ^1.2.0
   flutter_colorpicker: ^1.0.3
+  mysql1: ^0.20.0
 
 dev_dependencies:
   flutter_test:

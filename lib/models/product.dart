@@ -12,7 +12,7 @@ class Product {
   final Map<String , List<String>> attributes;
   final String stock_status;
   final int stock_quantity;
-  final List<String?> gallery_images;
+  //final List<String?> gallery_images;
   Product({
     required this.title,
     required this.description,
@@ -23,7 +23,7 @@ class Product {
     this.rating,
     this.id,
     required this.attributes,
-    required this.gallery_images,
+    //required this.gallery_images,
     required this.stock_quantity,
     required this.stock_status,
   });
@@ -39,7 +39,7 @@ class Product {
       'id': id,
       'rating': rating,
       'attributes': attributes,
-      'gallery_images': gallery_images,
+      //'gallery_images': gallery_images,
       'stock_quantity': stock_quantity,
       'stock_status': stock_status,
     };
@@ -60,10 +60,9 @@ class Product {
     for (var item in galleryImages) {
       if (item is String) {
         galleryImagesList.add(item);
-      } else if (item == null) {
-        galleryImagesList.add(null);
+      } else {
+        galleryImagesList.add(null); // Handle other data types gracefully
       }
-      // Add additional handling for other types if needed
     }
   }
 
@@ -77,7 +76,7 @@ class Product {
     id: map['_id'],
     attributes: attributesMap,
     rating: map['rating'] ?? '',
-    gallery_images: galleryImagesList,
+    //gallery_images: galleryImagesList,
     stock_quantity: map['stock_quantity']?.toDouble() ?? 0.0,
     stock_status: map['stock_status'] ?? '',
   );

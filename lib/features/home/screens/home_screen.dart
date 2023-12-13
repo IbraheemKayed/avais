@@ -165,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 10,
             ),
-            DealOfDay(),
+            //DealOfDay(),
             SizedBox(
               height: 10,
             ),
